@@ -1,11 +1,12 @@
 let timerDispaly = document.getElementById("timer");
 
-// Update every second
-setInterval(
-	function updateTimer() {
+function updateTimer() {
   const currentDate = new Date();
   timerDispaly.innerHTML = currentDate.toLocaleString();
-}, 1000
-)
+}
 
-udpadeTimer();
+// Update immediately on page load
+updateTimer();
+
+// Update every second
+setInterval(updateTimer, 1000);
