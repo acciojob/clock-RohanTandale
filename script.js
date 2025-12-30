@@ -1,11 +1,11 @@
-//your JS code here. If required.
-let timerDisplay=document.getElementByID("timer");
-let currentDate = new Date();
+let timerDispaly = document.getElementById("timer");
 
+// Update every second
 setInterval(
-	function () {
-		currentDate=new Date()
-
-		timerDisplay.innerHTML=currentDate.toLocaleString()
-	},1000
+	function updateTimer() {
+  const currentDate = new Date();
+  timerDispaly.innerHTML = currentDate.toLocaleString();
+}, 1000
 )
+
+udpadeTimer();
